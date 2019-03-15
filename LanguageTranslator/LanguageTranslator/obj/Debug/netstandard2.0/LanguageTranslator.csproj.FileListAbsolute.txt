@@ -1,0 +1,12 @@
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.deps.json
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.csproj.CoreCompileInputs.cache
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.AssemblyInfoInputs.cache
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.AssemblyInfo.cs
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.csprojAssemblyReference.cache

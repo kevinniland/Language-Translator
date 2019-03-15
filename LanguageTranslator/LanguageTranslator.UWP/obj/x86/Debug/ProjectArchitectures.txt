@@ -1,0 +1,1 @@
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\LanguageTranslator.UWP.csproj;x86

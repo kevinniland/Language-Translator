@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LanguageTranslator"
+             x:Class="LanguageTranslator.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Language Translator" HorizontalOptions="Center" Grid.Row="0" />
+
+        <StackLayout x:Name="slEnteredText" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
+            <Label Text="Text to translate: " />
+            <Entry x:Name="entText" Placeholder="Enter text to translate" Keyboard="Text" 
+                   HeightRequest="200" WidthRequest="250" TextChanged="EntText_TextChanged" />
+        </StackLayout>
+        <StackLayout x:Name="slButtons" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Margin="5, 5, 5, 5">
+            <Button x:Name="btnNAME" Text="TBC" Margin="1" Clicked="BtnNAME_Clicked" IsEnabled="False" />
+            <Button x:Name="btnTranslate" Text="Translate" Margin="1" Clicked="BtnTranslate_Clicked" />
+        </StackLayout>
+        <StackLayout x:Name="slLanguages" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 6, 3, 3">
+            <Label Text="Languages: " />
+            <Picker x:Name="pckLanguages">
+                <Picker.Items>
+                    
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout x:Name="slTranslation" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
+            <Label Text="Translation: " />
+            <Entry x:Name="entTranslation" Placeholder="Translation" Keyboard="Text" 
+                   HeightRequest="200" WidthRequest="250" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
