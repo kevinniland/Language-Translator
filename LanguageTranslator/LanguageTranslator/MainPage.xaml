@@ -10,32 +10,28 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Label Text="Language Translator" HorizontalOptions="Center" Grid.Row="0" />
 
         <StackLayout x:Name="slEnteredText" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
-            <!--<Label Text="Text to translate: " />-->
             <Entry x:Name="entText" Placeholder="Enter text to translate" Keyboard="Text" 
                    HeightRequest="200" WidthRequest="250" TextChanged="EntText_TextChanged" />
         </StackLayout>
-        <StackLayout x:Name="slDetectSourceLanguage" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
-            <Button x:Name="btnDetectSourceLanguage" Text="Detect Source Language" Clicked="BtnDetectSourceLanguage_Clicked" />
-        </StackLayout>
-        <StackLayout x:Name="slButtons" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" Margin="5, 5, 5, 5">
-            <Button x:Name="btnNAME" Text="TBC" Margin="1" Clicked="BtnNAME_Clicked" IsEnabled="False" />
+        <StackLayout x:Name="slButtons" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Margin="5, 5, 5, 5">
             <Button x:Name="btnTranslate" Text="Translate" Margin="1" Clicked="BtnTranslate_Clicked" />
         </StackLayout>
-        <StackLayout x:Name="slLanguages" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 6, 3, 3">
+        <StackLayout x:Name="slLanguages" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 6, 3, 3">
             <Label Text="Languages: " />
             <Picker x:Name="pckLanguages">
-                <Picker.Items>
-                    
-                </Picker.Items>
+                <Picker.SelectedIndex>1</Picker.SelectedIndex>
             </Picker>
         </StackLayout>
-        <StackLayout x:Name="slTranslation" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
-            <!--<Label Text="Translation: " />-->
+        <StackLayout x:Name="slSourceLanguage" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
+            <Label x:Name="lblSourceLanguage" Text="Source language: "/>
+        </StackLayout>
+        <StackLayout x:Name="slTranslation" Grid.Row="5" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 3, 3, 3">
             <Entry x:Name="entTranslation" Placeholder="Translation" Keyboard="Text" 
                    HeightRequest="200" WidthRequest="250" />
         </StackLayout>

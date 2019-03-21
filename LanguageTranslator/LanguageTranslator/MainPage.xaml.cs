@@ -1,6 +1,10 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +27,7 @@ namespace LanguageTranslator
          * A status code plus the shorthand of the detected language will be returned. In this example, ' "code": 200, "lang": "en" ' will be returned
          * Here, the service used here is 'detect'
          */ 
-        public static string detectSourceLanguage { get; } = @"https://translate.yandex.net/api/v1.5/tr.json/detect?key={0}&ui={1}";
+        public static string detectSourceLanguage { get; } = @"https://translate.yandex.net/api/v1.5/tr.json/detect?key={0}&text={1}";
 
         /* To check if this link is valid and the API key is valid, replace '{0}' with the API key,'{1}' with a word e.g text=Hello,
          * and '{2}' with the shorthand of the language you wish to translate the text to e.g. 'fr' to translate the text into French
@@ -37,17 +41,14 @@ namespace LanguageTranslator
 
     public partial class MainPage : ContentPage
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        private List<string> LanguagesList;
 
-        public void restSharpSetup()
+        private IRestResponse Request(string url)
         {
             // Create new RestSharp client
             var client = new RestClient()
             {
-                BaseUrl = new Uri(string.Format(AppCache.detectSourceLanguage, AppCache.APIKey, entText.Text))
+                BaseUrl = new Uri(url)
             };
 
             // Create new RestSharp request
@@ -56,31 +57,36 @@ namespace LanguageTranslator
                 Method = Method.GET
             };
 
-            var serverResponse = client.Execute(request);
+            return client.Execute(request);
         }
 
-        private void EntText_TextChanged(object sender, TextChangedEventArgs e)
+        public MainPage()
         {
+            InitializeComponent();
 
-        }
+            // Fills the picker 'pckLanguages' with all available langauges when the main page is loaded
+            var serverResponse = Request(string.Format(AppCache.getLanguages, AppCache.APIKey, lblSourceLanguage.Text));
+            var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
 
-        private void BtnNAME_Clicked(object sender, EventArgs e)
-        {
+            foreach (DictionaryEntry dictionaryEntry in dictionary)
+            {
+                if (dictionaryEntry.Key.Equals("langs"))
+                {
+                    var languages = (JObject)dictionaryEntry.Value;
+                    LanguagesList = new List<string>();
 
-        }
+                    pckLanguages.Items.Clear();
 
-        private void BtnTranslate_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        /* Detects the source language i.e detects what language the entered text is in.
-         * It does this through a library called 'RestSharp'
-         */ 
-        private void BtnDetectSourceLanguage_Clicked(object sender, EventArgs e)
-        {
-            restSharpSetup();
-
+                    foreach (var lang in languages)
+                    {
+                        if (!lang.Equals(lblSourceLanguage.Text))
+                        {
+                            pckLanguages.Items.Add(lang.Value.ToString());
+                            LanguagesList.Add(lang.Key);
+                        }
+                    }
+                }
+            }
         }
     }
 }
