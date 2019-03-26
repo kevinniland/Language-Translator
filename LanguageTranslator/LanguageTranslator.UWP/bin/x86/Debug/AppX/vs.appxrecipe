@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-21T11:48:01.752</Modified>
+      <Modified>2019-03-26T15:16:26.686</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\LanguageTranslator.UWP.exe">
       <PackagePath>entrypoint\LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-03-21T11:48:01.229</Modified>
+      <Modified>2019-03-26T15:16:26.106</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -720,7 +720,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll">
       <PackagePath>LanguageTranslator.dll</PackagePath>
-      <Modified>2019-03-21T11:47:56.650</Modified>
+      <Modified>2019-03-26T15:16:21.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -871,11 +871,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-21T11:48:01.088</Modified>
+      <Modified>2019-03-26T15:16:25.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-21T11:48:01.089</Modified>
+      <Modified>2019-03-26T15:16:25.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -887,11 +887,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-21T11:07:50.515</Modified>
+      <Modified>2019-03-21T23:07:29.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\LanguageTranslator.UWP.exe">
       <PackagePath>LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-03-21T11:48:01.737</Modified>
+      <Modified>2019-03-26T15:16:26.660</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

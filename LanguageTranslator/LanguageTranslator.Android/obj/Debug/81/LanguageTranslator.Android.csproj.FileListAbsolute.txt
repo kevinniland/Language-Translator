@@ -34,6 +34,7 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\R.cs.flag
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\R.txt
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\uploadflags.txt
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\bin\Debug\FormsViewGroup.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\bin\Debug\Mono.Android.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\bin\Debug\mscorlib.pdb
