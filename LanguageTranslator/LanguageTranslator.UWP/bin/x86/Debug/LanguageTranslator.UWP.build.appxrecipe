@@ -526,6 +526,12 @@
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\lib\uap10.0.15138\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
+      <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.dll">
+      <PackagePath>Plugin.FilePicker.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>

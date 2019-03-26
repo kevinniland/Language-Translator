@@ -8,5 +8,5 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.AssemblyInfo.cs
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.pdb
-C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.csprojAssemblyReference.cache
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\XamlC.stamp

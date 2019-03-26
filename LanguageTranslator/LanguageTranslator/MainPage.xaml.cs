@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
+using Plugin.FilePicker;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-#endregion 
+using System.IO;
+#endregion
 
 namespace LanguageTranslator
 {
@@ -100,6 +102,19 @@ namespace LanguageTranslator
             {
                 entTranslation.Placeholder = string.Join("", dictionary["text"]);
             }
+        }
+
+        private async void BtnReadFile_Clicked(object sender, EventArgs e)
+        {
+            string fileText;
+            string filePath;
+
+            var file = await CrossFilePicker.Current.PickFile();
+
+            if (file != null)
+            {
+                lblFileRead.Text = file.FileName;
+            } 
         }
     }
     #endregion

@@ -303,3 +303,7 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Newtonsoft.Json.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\RestSharp.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.Abstractions.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.Abstractions.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.pdb
