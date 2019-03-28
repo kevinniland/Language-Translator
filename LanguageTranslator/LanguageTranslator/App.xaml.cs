@@ -16,7 +16,10 @@ namespace LanguageTranslator
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            var mainPage = new MainPage();
+            this.MainPage = mainPage;
+
+            mainPage.loadLanguages();
         }
 
         protected override void OnSleep()

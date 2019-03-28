@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
+using Plugin.FilePicker.Abstractions;
 #endregion
 
 namespace LanguageTranslator
@@ -49,7 +50,7 @@ namespace LanguageTranslator
         #endregion
 
         #region private methods - provides the main functionality of the app
-        private void loadLanguages()
+        public void loadLanguages()
         {
             #region Load all available languages into the picker 'pckLangugages'
             // Fills the picker 'pckLanguages' with all available langauges when the main page is loaded
@@ -80,8 +81,9 @@ namespace LanguageTranslator
 
         private void EntText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            loadLanguages();
+            // loadLanguages();
 
+            #region Take in the entered text and pass it into the 'detectSourceLanguage' function - the language the user is writing in will be returned
             var serverResponse = Request(string.Format(ApiSetup.detectSourceLanguage, ApiSetup.APIKey, entText.Text));
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
             var statusCode = dictionary["code"].ToString();
@@ -90,6 +92,7 @@ namespace LanguageTranslator
             {
                 lblSourceLanguage.Text = dictionary["lang"].ToString();
             }
+            #endregion
         }
 
         private void BtnTranslate_Clicked(object sender, EventArgs e)
@@ -107,14 +110,21 @@ namespace LanguageTranslator
         private async void BtnReadFile_Clicked(object sender, EventArgs e)
         {
             string fileText;
-            string filePath;
 
-            var file = await CrossFilePicker.Current.PickFile();
+            // Allows the user to choose a file from any location
+            FileData fileData = await CrossFilePicker.Current.PickFile();
 
-            if (file != null)
+            if (fileData != null)
             {
-                lblFileRead.Text = file.FileName;
-            } 
+                lblFileRead.Text = fileData.FileName; // Displays the name of the file
+                fileText = System.Text.Encoding.UTF8.GetString(fileData.DataArray);
+
+                entText.Text = fileText;
+            }
+            else
+            {
+                return;
+            }
         }
     }
     #endregion

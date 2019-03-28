@@ -110,6 +110,8 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"LanguageTranslator.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.FilePicker.Abstractions.dll",
+		"Plugin.FilePicker.dll",
 		"RestSharp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
