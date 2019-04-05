@@ -49,8 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>2.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver">
+      <Version>2.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver.Core">
+      <Version>2.8.0</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugin.FilePicker">
       <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.TextToSpeech">
+      <Version>4.0.0.7</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
@@ -92,13 +104,18 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LanguageTranslator\LanguageTranslator.csproj">
       <Project>{852E0CE8-3AAE-48A0-A909-935D7246B1B3}</Project>
       <Name>LanguageTranslator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\translator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

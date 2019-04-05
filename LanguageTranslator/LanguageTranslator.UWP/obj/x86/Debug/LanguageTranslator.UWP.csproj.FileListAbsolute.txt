@@ -307,3 +307,9 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.Abstractions.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.FilePicker.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Plugin.TextToSpeech.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\obj\x86\Debug\Plugin.TextToSpeech.pri.xml
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\DnsClient.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MongoDB.Bson.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MongoDB.Driver.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MongoDB.Driver.Core.dll

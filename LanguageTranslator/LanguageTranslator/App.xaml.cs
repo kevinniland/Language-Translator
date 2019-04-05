@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,10 +17,10 @@ namespace LanguageTranslator
 
         protected override void OnStart()
         {
-            var mainPage = new MainPage();
-            this.MainPage = mainPage;
+            //var mainPage = new MainPage();
+            //this.MainPage = mainPage;
 
-            mainPage.loadLanguages();
+            //mainPage.getLanguages();
         }
 
         protected override void OnSleep()

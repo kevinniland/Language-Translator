@@ -28,6 +28,18 @@
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\LanguageTranslator.UWP.exe">
       <PackagePath>entrypoint\LanguageTranslator.UWP.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
+      <PackagePath>DnsClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongodb.bson\2.8.0\lib\netstandard1.5\MongoDB.Bson.dll">
+      <PackagePath>MongoDB.Bson.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongodb.driver\2.8.0\lib\netstandard1.5\MongoDB.Driver.dll">
+      <PackagePath>MongoDB.Driver.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongodb.driver.core\2.8.0\lib\netstandard1.5\MongoDB.Driver.Core.dll">
+      <PackagePath>MongoDB.Driver.Core.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
@@ -532,6 +544,9 @@
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.dll">
       <PackagePath>Plugin.FilePicker.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugins.texttospeech\4.0.0.7\lib\uap10.0.15063\Plugin.TextToSpeech.dll">
+      <PackagePath>Plugin.TextToSpeech.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
@@ -657,6 +672,12 @@
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\history.png">
+      <PackagePath>history.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\translator.png">
+      <PackagePath>translator.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
