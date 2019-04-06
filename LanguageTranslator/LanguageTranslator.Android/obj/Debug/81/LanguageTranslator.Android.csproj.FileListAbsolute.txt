@@ -113,6 +113,8 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\bin\Debug\LanguageTranslator.dll.mdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\linksrc\LanguageTranslator.dll.mdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\linksrc\Plugin.FilePicker.Abstractions.dll.mdb
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\linksrc\Plugin.FilePicker.dll.mdb

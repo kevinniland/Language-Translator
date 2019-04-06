@@ -30,17 +30,25 @@
     <AppXManifest Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-05T21:04:40.906</Modified>
+      <Modified>2019-04-06T14:04:52.069</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\LanguageTranslator.UWP.exe">
       <PackagePath>entrypoint\LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-04-05T21:04:40.332</Modified>
+      <Modified>2019-04-06T14:04:50.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
       <Modified>2018-08-15T22:47:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.protobuf\3.5.1\lib\netstandard1.0\Google.Protobuf.dll">
+      <PackagePath>Google.Protobuf.dll</PackagePath>
+      <Modified>2017-12-21T20:23:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongocsharpdriver\2.8.0\lib\netstandard1.5\MongoDB.Driver.Legacy.dll">
+      <PackagePath>MongoDB.Driver.Legacy.dll</PackagePath>
+      <Modified>2019-03-13T13:26:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongodb.bson\2.8.0\lib\netstandard1.5\MongoDB.Bson.dll">
       <PackagePath>MongoDB.Bson.dll</PackagePath>
@@ -53,6 +61,10 @@
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mongodb.driver.core\2.8.0\lib\netstandard1.5\MongoDB.Driver.Core.dll">
       <PackagePath>MongoDB.Driver.Core.dll</PackagePath>
       <Modified>2019-03-13T13:26:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\mysql.data\8.0.15\lib\netstandard2.0\MySql.Data.dll">
+      <PackagePath>MySql.Data.dll</PackagePath>
+      <Modified>2019-01-28T07:41:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -718,6 +730,18 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-05-16T16:28:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\system.configuration.configurationmanager\4.4.1\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+      <Modified>2017-11-20T18:09:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\system.security.cryptography.protecteddata\4.4.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+      <Modified>2017-07-19T09:01:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\system.security.permissions\4.4.1\lib\netstandard2.0\System.Security.Permissions.dll">
+      <PackagePath>System.Security.Permissions.dll</PackagePath>
+      <Modified>2017-11-20T18:09:02.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
       <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>
       <Modified>2016-05-25T11:50:18.000</Modified>
@@ -748,7 +772,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll">
       <PackagePath>LanguageTranslator.dll</PackagePath>
-      <Modified>2019-04-05T21:04:36.060</Modified>
+      <Modified>2019-04-06T14:04:43.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -907,11 +931,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-05T21:04:40.203</Modified>
+      <Modified>2019-04-06T14:04:50.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-05T21:04:40.203</Modified>
+      <Modified>2019-04-06T14:04:50.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -923,11 +947,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-05T21:00:22.785</Modified>
+      <Modified>2019-04-05T23:51:56.352</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\LanguageTranslator.UWP.exe">
       <PackagePath>LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-04-05T21:04:40.891</Modified>
+      <Modified>2019-04-06T14:04:52.021</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Plugin.FilePicker;
 using Plugin.FilePicker.Abstractions;
@@ -6,6 +8,7 @@ using RestSharp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +21,11 @@ namespace LanguageTranslator
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TranslatorPage : ContentPage
 	{
+        #region Variables
+        bool isRunning;
+        string userInput, srcLang, translation;
+        int chosenLang;
+        #endregion
         #region Interfaces
         private IVoiceRecognition _iVoiceRecognition;
         #endregion
@@ -26,12 +34,16 @@ namespace LanguageTranslator
         private List<string> LanguagesList;
         #endregion
 
+        // readonly MongoDatabase mongoDatabase;
+
         public TranslatorPage()
         {
             InitializeComponent();
+            isRunning = true;
+            // MLab();
         }
 
-        #region Request function
+        #region RestSharp
         private IRestResponse Request(string url)
         {
             // Create new RestSharp client
@@ -91,9 +103,26 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
             var statusCode = dictionary["code"].ToString();
 
+            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+            MongoClient client = new MongoClient(connectionString);
+
+            var database = client.GetDatabase("mobile_apps_dev");
+            var collection = database.GetCollection<BsonDocument>("translations_history");
+
+            var userInput = entText.Text;
+
             if (statusCode.Equals("200"))
             {
                 lblSourceLanguage.Text = dictionary["lang"].ToString();
+                var srcLang = lblSourceLanguage.Text;
+
+                var document = new BsonDocument
+                {
+                    { "User Input", userInput },
+                    { "Source Language", srcLang }
+                };
+
+                collection.InsertOneAsync(document);
             }
             #endregion
         }
@@ -109,12 +138,53 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format
             var statusCode = dictionary["code"].ToString();
 
+            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+            MongoClient client = new MongoClient(connectionString);
+
+            var database = client.GetDatabase("mobile_apps_dev");
+            var collection = database.GetCollection<BsonDocument>("translations_history");
+
+            chosenLang = pckLanguages.SelectedIndex;
+
             if (statusCode.Equals("200"))
             {
                 entTranslation.Placeholder = string.Join("", dictionary["text"]);
+                translation = entTranslation.Placeholder;
+
+                var document = new BsonDocument
+                {
+                    { "Chosen Language", chosenLang },
+                    { "Translation", translation }
+                };
+
+                collection.InsertOneAsync(document);
             }
             #endregion
         }
+
+        #region MongoDB/MLab
+        public void SaveToDatabase(string userInput, string srcLang, int chosenLang, string translation)
+        {
+            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+            MongoClient client = new MongoClient(connectionString);
+
+            var database = client.GetDatabase("mobile_apps_dev");
+            var collection = database.GetCollection<BsonDocument>("translations_history");
+
+            while (isRunning)
+            {
+                var document = new BsonDocument
+                {
+                    { "User Input", userInput },
+                    { "Source Language", srcLang },
+                    { "Chosen Language", chosenLang },
+                    { "Translation", translation }
+                };
+
+                collection.InsertOneAsync(document);
+            }
+        }
+        #endregion
 
         private async void BtnReadFile_Clicked(object sender, EventArgs e)
         {

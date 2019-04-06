@@ -23,7 +23,7 @@ namespace LanguageTranslator
         public MainPage()
         {
             InitializeComponent();
-            this.CurrentPage = this.Children[1];
+            this.CurrentPage = this.Children[0];
         }
     }
 }

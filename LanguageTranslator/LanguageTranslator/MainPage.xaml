@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:LanguageTranslator"
              x:Class="LanguageTranslator.MainPage">
     
-    <local:TranslatorPage Title="Translator" Icon="translator.png" />
-    <local:History Title="History" Icon="history.png" />
+    <local:TranslatorPage Title="Translator" />
+    <local:History Title="History" />
 </TabbedPage>
