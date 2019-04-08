@@ -184,6 +184,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.CurrentActivity/2.1.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        }
+      },
       "RestSharp/106.6.9": {
         "type": "package",
         "compile": {
@@ -1488,6 +1500,20 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "Plugin.CurrentActivity/2.1.0.4": {
+      "sha512": "mwUaRnl5KyIAJbhqQzL/ZIFuRcqsa0lMyCHuJs8wer+pSjYDH5cJR9X8yoB9BV5j6ccogGxyb5VkUUhvRUemTA==",
+      "type": "package",
+      "path": "plugin.currentactivity/2.1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Plugin.CurrentActivity.dll",
+        "lib/monoandroid44/Plugin.CurrentActivity.xml",
+        "plugin.currentactivity.2.1.0.4.nupkg.sha512",
+        "plugin.currentactivity.nuspec",
+        "readme.txt"
       ]
     },
     "RestSharp/106.6.9": {
@@ -5378,6 +5404,7 @@
       "MongoDB.Driver >= 2.8.0",
       "MongoDB.Driver.Core >= 2.8.0",
       "MySql.Data >= 8.0.15",
+      "Plugin.CurrentActivity >= 2.1.0.4",
       "Xam.Plugin.FilePicker >= 1.1.0",
       "Xam.Plugins.TextToSpeech >= 4.0.0.7",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
@@ -5441,6 +5468,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[8.0.15, )"
+          },
+          "Plugin.CurrentActivity": {
+            "target": "Package",
+            "version": "[2.1.0.4, )"
           },
           "Xam.Plugin.FilePicker": {
             "target": "Package",

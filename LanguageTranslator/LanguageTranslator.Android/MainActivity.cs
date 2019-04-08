@@ -13,7 +13,7 @@ using Android.Speech;
 namespace LanguageTranslator.Droid
 {
     [Activity(Label = "LanguageTranslator", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IMessageSender
     {
         private readonly int VOICE = 10;
 
@@ -37,15 +37,16 @@ namespace LanguageTranslator.Droid
                     if (matches.Count != 0)
                     {
                         string textInput = matches[0];
-                        //MessagingCenter.Send<IMessageSender, string>(this, "STT", textInput);
+                        MessagingCenter.Send<IMessageSender, string>(this, "STT", textInput);
                     }
                     else
                     {
-                        //MessagingCenter.Send<IMessageSender, string>(this, "STT", "No input");
+                        MessagingCenter.Send<IMessageSender, string>(this, "STT", "No input");
                     }
 
                 }
             }
+
             base.OnActivityResult(requestCode, resultCode, data);
         }
     }

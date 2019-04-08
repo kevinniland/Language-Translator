@@ -27,7 +27,7 @@ namespace LanguageTranslator
             var database = client.GetDatabase("mobile_apps_dev");
             var collection = database.GetCollection<BsonDocument>("translations_history");
 
-            entData.Text = collection.Find(new BsonDocument()).ForEachAsync(document);
+            //entData.Text = collection.Find(new BsonDocument()).ForEachAsync(document);
         }
 	}
 }

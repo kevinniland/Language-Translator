@@ -117,6 +117,7 @@ class MonoPackageManager_Resources {
 		"MongoDB.Driver.Legacy.dll",
 		"MySql.Data.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
 		"Plugin.FilePicker.Abstractions.dll",
 		"Plugin.FilePicker.dll",
 		"Plugin.TextToSpeech.dll",
