@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageTranslator.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageTranslator.UWP", "LanguageTranslator\LanguageTranslator.UWP\LanguageTranslator.UWP.csproj", "{CD79509A-18FF-4542-AEE1-EA69C5E81A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageTranslator", "LanguageTranslator\LanguageTranslator\LanguageTranslator.csproj", "{32BE9FCA-362B-401A-836C-771C9BC51C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageTranslator", "LanguageTranslator\LanguageTranslator\LanguageTranslator.csproj", "{32BE9FCA-362B-401A-836C-771C9BC51C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageTranslatorTest", "LanguageTranslatorTest\LanguageTranslatorTest.csproj", "{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,22 @@ Global
 		{32BE9FCA-362B-401A-836C-771C9BC51C62}.Release|x86.ActiveCfg = Release|Any CPU
 		{32BE9FCA-362B-401A-836C-771C9BC51C62}.Release|x86.Build.0 = Release|Any CPU
 		{32BE9FCA-362B-401A-836C-771C9BC51C62}.Release|x86.Deploy.0 = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|ARM.Build.0 = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|x64.Build.0 = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Debug|x86.Build.0 = Debug|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|ARM.ActiveCfg = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|ARM.Build.0 = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|x64.ActiveCfg = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|x64.Build.0 = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|x86.ActiveCfg = Release|Any CPU
+		{4CDB3924-E535-4A0D-84EF-54EF2B4A5D78}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

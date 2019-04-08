@@ -26,6 +26,7 @@ namespace LanguageTranslator
         string userInput, srcLang, translation;
         int chosenLang;
         #endregion
+        
         #region Interfaces
         private IVoiceRecognition _iVoiceRecognition;
         #endregion
@@ -40,7 +41,31 @@ namespace LanguageTranslator
         {
             InitializeComponent();
             isRunning = true;
-            // MLab();
+
+            try
+            {
+                _iVoiceRecognition = DependencyService.Get<IVoiceRecognition>();
+            }
+            catch (Exception ex)
+            {
+                lblRecText.Text = ex.Message;
+            }
+
+
+            MessagingCenter.Subscribe<IVoiceRecognition, string>(this, "STT", (sender, args) =>
+            {
+                SpeechToText(args);
+            });
+
+            MessagingCenter.Subscribe<IVoiceRecognition>(this, "Final", (sender) =>
+            {
+                btnRecordVoice.IsEnabled = true;
+            });
+
+            MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
+            {
+                SpeechToText(args);
+            });
         }
 
         #region RestSharp
@@ -62,8 +87,8 @@ namespace LanguageTranslator
         }
         #endregion
 
-        #region private methods - provides the main functionality of the app
-        private void loadLanguages()
+        #region public methods - provides the main functionality of the app -> Methods are public to allow testing in LanguageTranslatorTest
+        public void LoadLanguages()
         {
             #region Load Languages
             // Load all available languages into the picker 'pckLangugages'
@@ -93,9 +118,9 @@ namespace LanguageTranslator
             #endregion
         }
 
-        private void EntText_TextChanged(object sender, TextChangedEventArgs e)
+        public void EntText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            loadLanguages();
+            LoadLanguages();
 
             #region Detect Source Language
             // Take in the entered text and pass it into the 'detectSourceLanguage' function - the language the user is writing in will be returned
@@ -127,7 +152,7 @@ namespace LanguageTranslator
             #endregion
         }
 
-        private void BtnTranslate_Clicked(object sender, EventArgs e)
+        public void BtnTranslate_Clicked(object sender, EventArgs e)
         {
             #region Translation
             /*
@@ -186,7 +211,7 @@ namespace LanguageTranslator
         }
         #endregion
 
-        private async void BtnReadFile_Clicked(object sender, EventArgs e)
+        public async void BtnReadFile_Clicked(object sender, EventArgs e)
         {
             #region Read in a file from anywhere
             string fileText;
@@ -208,12 +233,12 @@ namespace LanguageTranslator
             #endregion
         }
 
-        private void SpeechToText(string args)
+        public void SpeechToText(string args)
         {
             entText.Text = args;
         }
 
-        private void BtnRecordVoice_Clicked(object sender, EventArgs e)
+        public void BtnRecordVoice_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -223,6 +248,31 @@ namespace LanguageTranslator
             {
                 entText.Text = exception.Message;
             }
+        }
+
+        public void SpeechToTextFinalResultRecieved(string args)
+        {
+            lblRecText.Text = args;
+        }
+
+        public void Start_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                _iVoiceRecognition.startSpeechToText();
+            }
+            catch (Exception ex)
+            {
+                lblRecText.Text = ex.Message;
+            }
+
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                btnRecordVoice.IsEnabled = false;
+            }
+
+
+
         }
     }
     #endregion
