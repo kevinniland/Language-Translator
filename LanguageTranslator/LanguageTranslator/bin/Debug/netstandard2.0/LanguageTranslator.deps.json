@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "2c8b0aee43192662e1cf7525c4571da3c5a8263c"
+    "signature": "9b006a41928b0538e77be6694bf416d54c2c5b9c"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "LanguageTranslator/1.0.0": {
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
@@ -16,6 +17,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -33,6 +35,29 @@
           "lib/netstandard2.0/DnsClient.dll": {
             "assemblyVersion": "1.2.0.0",
             "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "assemblyVersion": "1.38.2.0",
+            "fileVersion": "1.38.2.0"
+          }
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.38.2.0",
+            "fileVersion": "1.38.2.0"
           }
         }
       },
@@ -419,7 +444,7 @@
           "System.Linq.Expressions": "4.1.0",
           "System.ObjectModel": "4.0.12",
           "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Reflection.TypeExtensions": "4.1.0",
@@ -516,7 +541,7 @@
           "System.Linq": "4.3.0",
           "System.ObjectModel": "4.0.12",
           "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.0.1",
@@ -634,7 +659,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit/4.0.1": {
+      "System.Reflection.Emit/4.3.0": {
         "dependencies": {
           "System.IO": "4.3.0",
           "System.Reflection": "4.3.0",
@@ -644,8 +669,8 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "1.0.24212.1"
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
           }
         }
       },
@@ -1034,6 +1059,17 @@
           }
         }
       },
+      "Tesseract/3.3.0": {
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "runtime": {
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {
@@ -1084,6 +1120,20 @@
       "sha512": "sha512-UT54vUwsoDR7PP/tD195TVBQArpmFKi/Wo58b7noG24hVVyz2nraN22i+RNA6D0jkhQM3wQjL/IvGzsjKpRhJA==",
       "path": "dnsclient/1.2.0",
       "hashPath": "dnsclient.1.2.0.nupkg.sha512"
+    },
+    "Google.Apis/1.38.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vy0D4ZxCzMcpWjS4OfVVb5mmg0GjWX+Qv2O3cGP/d0u7qUszIHCvIv9ZpTGvPaNKKMTDdxxNarTetQ5Qn36Wgw==",
+      "path": "google.apis/1.38.2",
+      "hashPath": "google.apis.1.38.2.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.38.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CHlnbGw8LBipzox3ojPBQjf/9u4xXnsbq16doByq2zgr3J7JnAeLyC2dV7uEs8/6ScnZs3Bd4ul+iJM7kCgW8Q==",
+      "path": "google.apis.core/1.38.2",
+      "hashPath": "google.apis.core.1.38.2.nupkg.sha512"
     },
     "Google.Protobuf/3.5.1": {
       "type": "package",
@@ -1491,12 +1541,12 @@
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit/4.0.1": {
+    "System.Reflection.Emit/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P2wqAj72fFjpP6wb9nSfDqNBMab+2ovzSDzUZK7MVIm54tBJEPr9jWfSjjoTpPwj1LeKcmX3vr0ttyjSSFM47g==",
-      "path": "system.reflection.emit/4.0.1",
-      "hashPath": "system.reflection.emit.4.0.1.nupkg.sha512"
+      "sha512": "sha512-vkUFFGejarllQQ8RKkdfuBUQpVlTR9HMDEawKOBDajOSGN08Bz8EjC0zi2fcE7RXQikLbEb1WYJQP3So8mmIGA==",
+      "path": "system.reflection.emit/4.3.0",
+      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",
@@ -1721,6 +1771,13 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
+    "Tesseract/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/g0raMHBmI+2HR5noaIFcHWI+T9aZo7G/afQGgksSXx3e8ZqEE5szOmUuqscY7+5wc538LAfVPUvbN28pD3kQ==",
+      "path": "tesseract/3.3.0",
+      "hashPath": "tesseract.3.3.0.nupkg.sha512"
     },
     "Xam.Plugin.FilePicker/1.1.0": {
       "type": "package",

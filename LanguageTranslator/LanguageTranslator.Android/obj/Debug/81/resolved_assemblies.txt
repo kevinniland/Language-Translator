@@ -1,6 +1,8 @@
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\LanguageTranslator.Android.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\DnsClient.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\FormsViewGroup.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Google.Apis.Core.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Google.Apis.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Google.Protobuf.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\LanguageTranslator.dll
@@ -28,6 +30,7 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Security.Principal.Windows.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Xml.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Xml.Linq.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Tesseract.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Android.Arch.Core.Common.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Android.Arch.Lifecycle.Common.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Android.Arch.Lifecycle.Runtime.dll
@@ -51,6 +54,11 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.GooglePlayServices.Base.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.GooglePlayServices.Tasks.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.GooglePlayServices.Vision.Common.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Xamarin.GooglePlayServices.Vision.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\netstandard.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Data.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Numerics.dll
@@ -108,3 +116,4 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Security.Cryptography.ProtectedData.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Security.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\Mono.Security.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.Android\obj\Debug\81\android\assets\System.Reflection.Emit.dll

@@ -109,6 +109,8 @@ class MonoPackageManager_Resources {
 		"LanguageTranslator.Android.dll",
 		"DnsClient.dll",
 		"FormsViewGroup.dll",
+		"Google.Apis.Core.dll",
+		"Google.Apis.dll",
 		"Google.Protobuf.dll",
 		"LanguageTranslator.dll",
 		"MongoDB.Bson.dll",
@@ -127,6 +129,7 @@ class MonoPackageManager_Resources {
 		"System.Security.AccessControl.dll",
 		"System.Security.Permissions.dll",
 		"System.Security.Principal.Windows.dll",
+		"Tesseract.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",
@@ -150,6 +153,11 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
+		"Xamarin.GooglePlayServices.Base.dll",
+		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Tasks.dll",
+		"Xamarin.GooglePlayServices.Vision.Common.dll",
+		"Xamarin.GooglePlayServices.Vision.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

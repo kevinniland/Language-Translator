@@ -31,6 +31,12 @@
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.apis\1.38.2\lib\netstandard2.0\Google.Apis.dll">
+      <PackagePath>Google.Apis.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.apis.core\1.38.2\lib\netstandard2.0\Google.Apis.Core.dll">
+      <PackagePath>Google.Apis.Core.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.protobuf\3.5.1\lib\netstandard1.0\Google.Protobuf.dll">
       <PackagePath>Google.Protobuf.dll</PackagePath>
     </AppxPackagedFile>
@@ -555,6 +561,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\system.security.permissions\4.4.1\lib\netstandard2.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\tesseract\3.3.0\lib\netstandard2.0\Tesseract.dll">
+      <PackagePath>Tesseract.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
       <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>

@@ -14,6 +14,31 @@
           "lib/netstandard2.0/DnsClient.dll": {}
         }
       },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Google.Protobuf/3.5.1": {
         "type": "package",
         "dependencies": {
@@ -883,6 +908,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1215,6 +1256,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -1265,12 +1321,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -1295,6 +1353,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -2493,6 +2576,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2779,6 +2878,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -2829,12 +2943,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -2859,6 +2975,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -4109,6 +4250,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4411,6 +4568,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -4461,12 +4633,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -4491,6 +4665,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -5514,6 +5713,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5800,6 +6015,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -5850,12 +6080,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -5880,6 +6112,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -7078,6 +7335,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7364,6 +7637,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -7414,12 +7702,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -7444,6 +7734,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -8694,6 +9009,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8996,6 +9327,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -9046,12 +9392,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -9076,6 +9424,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -10274,6 +10647,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -10560,6 +10949,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -10610,12 +11014,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -10640,6 +11046,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
+        }
+      },
+      "Google.Apis/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.38.2",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.38.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
       "Google.Protobuf/3.5.1": {
@@ -11890,6 +12321,22 @@
           "lib/win8/_._": {}
         }
       },
+      "System.Reflection.Emit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.dll": {}
+        }
+      },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -12192,6 +12639,21 @@
           "lib/win8/_._": {}
         }
       },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "Xam.Plugin.FilePicker/1.1.0": {
         "type": "package",
         "compile": {
@@ -12242,12 +12704,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Google.Apis": "1.38.2",
           "MongoDB.Bson": "2.8.0",
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "MySql.Data": "8.0.15",
           "Newtonsoft.Json": "12.0.1",
           "RestSharp": "106.6.9",
+          "Tesseract": "3.3.0",
           "Xam.Plugin.FilePicker": "1.1.0",
           "Xam.Plugins.TextToSpeech": "4.0.0.7",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -12280,6 +12744,49 @@
         "lib/netstandard1.3/DnsClient.xml",
         "lib/netstandard2.0/DnsClient.dll",
         "lib/netstandard2.0/DnsClient.xml"
+      ]
+    },
+    "Google.Apis/1.38.2": {
+      "sha512": "vy0D4ZxCzMcpWjS4OfVVb5mmg0GjWX+Qv2O3cGP/d0u7qUszIHCvIv9ZpTGvPaNKKMTDdxxNarTetQ5Qn36Wgw==",
+      "type": "package",
+      "path": "google.apis/1.38.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "google.apis.1.38.2.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Core/1.38.2": {
+      "sha512": "CHlnbGw8LBipzox3ojPBQjf/9u4xXnsbq16doByq2zgr3J7JnAeLyC2dV7uEs8/6ScnZs3Bd4ul+iJM7kCgW8Q==",
+      "type": "package",
+      "path": "google.apis.core/1.38.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "google.apis.core.1.38.2.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
     "Google.Protobuf/3.5.1": {
@@ -18484,6 +18991,42 @@
         "system.reflection.nuspec"
       ]
     },
+    "System.Reflection.Emit/4.3.0": {
+      "sha512": "vkUFFGejarllQQ8RKkdfuBUQpVlTR9HMDEawKOBDajOSGN08Bz8EjC0zi2fcE7RXQikLbEb1WYJQP3So8mmIGA==",
+      "type": "package",
+      "path": "system.reflection.emit/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/monotouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/net45/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/xamarinmac20/_._",
+        "system.reflection.emit.4.3.0.nupkg.sha512",
+        "system.reflection.emit.nuspec"
+      ]
+    },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "sha512": "6b5fYr9ksZR6SYVzNzBqXQmAaGtY1mWYnpQAarBKp+C79NhUPRtX1bs4B5BS8nXzObcwVKc1fk+jVyCKCshdaQ==",
       "type": "package",
@@ -19745,6 +20288,27 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Tesseract/3.3.0": {
+      "sha512": "l/g0raMHBmI+2HR5noaIFcHWI+T9aZo7G/afQGgksSXx3e8ZqEE5szOmUuqscY7+5wc538LAfVPUvbN28pD3kQ==",
+      "type": "package",
+      "path": "tesseract/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Tesseract.targets",
+        "lib/net20/Tesseract.dll",
+        "lib/net40/Tesseract.dll",
+        "lib/net45/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.xml",
+        "tesseract.3.3.0.nupkg.sha512",
+        "tesseract.nuspec",
+        "x64/liblept1753.dll",
+        "x64/libtesseract3052.dll",
+        "x86/liblept1753.dll",
+        "x86/libtesseract3052.dll"
+      ]
+    },
     "Xam.Plugin.FilePicker/1.1.0": {
       "sha512": "qjPQ+MF5FDObArKr6snS95TBPcK2PmNoiXpjXY5c53tiWCGpTvUcbVccFAiruNiUpYBa/yGa50r9or/UsvlRaA==",
       "type": "package",
@@ -19977,12 +20541,14 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
+      "Google.Apis >= 1.38.2",
       "LanguageTranslator >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.5",
       "MongoDB.Bson >= 2.8.0",
       "MongoDB.Driver >= 2.8.0",
       "MongoDB.Driver.Core >= 2.8.0",
       "MySql.Data >= 8.0.15",
+      "Tesseract >= 3.3.0",
       "Xam.Plugin.FilePicker >= 1.1.0",
       "Xam.Plugins.TextToSpeech >= 4.0.0.7",
       "Xamarin.Forms >= 3.4.0.1008975",
@@ -20030,6 +20596,10 @@
     "frameworks": {
       "uap10.0.16299": {
         "dependencies": {
+          "Google.Apis": {
+            "target": "Package",
+            "version": "[1.38.2, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.1.5, )"
@@ -20049,6 +20619,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[8.0.15, )"
+          },
+          "Tesseract": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           },
           "Xam.Plugin.FilePicker": {
             "target": "Package",

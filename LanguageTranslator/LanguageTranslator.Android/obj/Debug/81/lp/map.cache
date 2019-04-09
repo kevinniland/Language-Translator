@@ -1,5 +1,7 @@
 DnsClient
 FormsViewGroup
+Google.Apis.Core
+Google.Apis
 Google.Protobuf
 LanguageTranslator
 MongoDB.Bson
@@ -19,6 +21,7 @@ System.Runtime
 System.Security.AccessControl
 System.Security.Permissions
 System.Security.Principal.Windows
+Tesseract
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -42,6 +45,11 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
+Xamarin.GooglePlayServices.Base
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Tasks
+Xamarin.GooglePlayServices.Vision.Common
+Xamarin.GooglePlayServices.Vision
 netstandard
 System.IO
 System.Threading.Tasks

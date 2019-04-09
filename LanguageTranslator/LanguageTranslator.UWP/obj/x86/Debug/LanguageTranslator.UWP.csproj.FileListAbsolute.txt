@@ -324,3 +324,12 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\obj\x86\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\obj\x86\Debug\FxResources.System.Security.Permissions.SR.resw
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\x86\liblept1753.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\x86\libtesseract3052.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\x64\liblept1753.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\x64\libtesseract3052.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Google.Apis.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Google.Apis.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Google.Apis.Core.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Google.Apis.Core.pdb
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Tesseract.dll

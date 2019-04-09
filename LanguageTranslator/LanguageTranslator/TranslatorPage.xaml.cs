@@ -18,6 +18,7 @@ using Xamarin.Forms.Xaml;
 
 namespace LanguageTranslator
 {
+
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TranslatorPage : ContentPage
 	{
@@ -26,7 +27,7 @@ namespace LanguageTranslator
         string userInput, srcLang, translation;
         int chosenLang;
         #endregion
-        
+
         #region Interfaces
         private IVoiceRecognition _iVoiceRecognition;
         #endregion
@@ -34,8 +35,6 @@ namespace LanguageTranslator
         #region Lists
         private List<string> LanguagesList;
         #endregion
-
-        // readonly MongoDatabase mongoDatabase;
 
         public TranslatorPage()
         {
@@ -48,6 +47,7 @@ namespace LanguageTranslator
             }
             catch (Exception ex)
             {
+                lblRecText.IsEnabled = true;
                 lblRecText.Text = ex.Message;
             }
 
@@ -248,6 +248,11 @@ namespace LanguageTranslator
             {
                 entText.Text = exception.Message;
             }
+        }
+
+        private void BtnTextRecognise_Clicked(object sender, EventArgs e)
+        {
+
         }
 
         public void SpeechToTextFinalResultRecieved(string args)

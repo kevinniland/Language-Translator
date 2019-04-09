@@ -30,17 +30,25 @@
     <AppXManifest Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-06T14:25:12.834</Modified>
+      <Modified>2019-04-08T14:52:54.105</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\LanguageTranslator.UWP.exe">
       <PackagePath>entrypoint\LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-04-06T14:25:10.498</Modified>
+      <Modified>2019-04-08T14:52:52.290</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\dnsclient\1.2.0\lib\netstandard2.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
       <Modified>2018-08-15T22:47:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.apis\1.38.2\lib\netstandard2.0\Google.Apis.dll">
+      <PackagePath>Google.Apis.dll</PackagePath>
+      <Modified>2019-04-02T13:07:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.apis.core\1.38.2\lib\netstandard2.0\Google.Apis.Core.dll">
+      <PackagePath>Google.Apis.Core.dll</PackagePath>
+      <Modified>2019-04-02T13:07:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\google.protobuf\3.5.1\lib\netstandard1.0\Google.Protobuf.dll">
       <PackagePath>Google.Protobuf.dll</PackagePath>
@@ -742,6 +750,10 @@
       <PackagePath>System.Security.Permissions.dll</PackagePath>
       <Modified>2017-11-20T18:09:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\tesseract\3.3.0\lib\netstandard2.0\Tesseract.dll">
+      <PackagePath>Tesseract.dll</PackagePath>
+      <Modified>2018-12-16T08:57:04.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\.nuget\packages\xam.plugin.filepicker\1.1.0\lib\UAP10\Plugin.FilePicker.Abstractions.dll">
       <PackagePath>Plugin.FilePicker.Abstractions.dll</PackagePath>
       <Modified>2016-05-25T11:50:18.000</Modified>
@@ -772,7 +784,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\LanguageTranslator.dll">
       <PackagePath>LanguageTranslator.dll</PackagePath>
-      <Modified>2019-04-06T14:25:01.006</Modified>
+      <Modified>2019-04-08T14:52:47.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -931,11 +943,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-06T14:25:10.121</Modified>
+      <Modified>2019-04-08T14:52:52.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-06T14:25:10.125</Modified>
+      <Modified>2019-04-08T14:52:52.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -947,11 +959,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-05T23:51:56.352</Modified>
+      <Modified>2019-04-08T14:52:53.392</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator.UWP\bin\x86\Debug\Core\LanguageTranslator.UWP.exe">
       <PackagePath>LanguageTranslator.UWP.exe</PackagePath>
-      <Modified>2019-04-06T14:25:12.789</Modified>
+      <Modified>2019-04-08T14:52:54.083</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

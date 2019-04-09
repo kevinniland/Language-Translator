@@ -11,4 +11,8 @@ C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTransl
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\TranslatorPage.xaml.g.cs
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\History.xaml.g.cs
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\LanguageTranslator.csprojAssemblyReference.cache
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\x86\liblept1753.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\x86\libtesseract3052.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\x64\liblept1753.dll
+C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\bin\Debug\netstandard2.0\x64\libtesseract3052.dll
 C:\Users\kevin\source\repos\LanguageTranslator\LanguageTranslator\LanguageTranslator\obj\Debug\netstandard2.0\XamlC.stamp
