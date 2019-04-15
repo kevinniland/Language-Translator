@@ -4,9 +4,9 @@
 <h3><b>Build version:</b></h3> <i>1.0.0</i>
 
 <h2>Project Statement</h2>
+<p>Create a cross platform app using Xamarin and Visual Studio. This should deploy to Android, iOS and Windows (as a Universal Windows Platform application). The application should be designed with a clear purpose that is easily grasped by the user. You need to incorporate the following elements:</p>
 
 <h2>Aim</h2>
-<p>Create a cross platform app using Xamarin and Visual Studio. This should deploy to Android, iOS and Windows (as a Universal Windows Platform application). The application should be designed with a clear purpose that is easily grasped by the user. You need to incorporate the following elements:</p>
 <ul>
 <li>Well-designed UI that is fit for purpose and provides a good user experience.</li>
 <li>Uses some form of data storage. Using settings is not enough, this must be either file
