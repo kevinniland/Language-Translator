@@ -27,10 +27,12 @@ application and tracked any issues that have arisen from this testing process.</
 <ul>
   <li>C#/Xamarin (Cross-Platform Application)</li>
   <li>Visual Studio 2017</li>
-  <li>Newtonsoft.Json</li>
-  <li>Plugin.CurrentActivity</li>
-  <li>RestSharp</li>
-  <li>Xam.Plugin.FilePicker</li>
-  <li>Xam.Plugins.TextToSpeech</li>
-  <li>Yandex API</li>
+  <li><a href="https://www.newtonsoft.com/json">Newtonsoft.Json</a></li>
+  <li><a href="https://www.nuget.org/packages/Plugin.CurrentActivity/">Plugin.CurrentActivity</a></li>
+  <li><a href="http://restsharp.org/">RestSharp</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Plugin.FilePicker/1.4.0-beta">Xam.Plugin.FilePicker</a></li>
+  <li><a href="https://www.nuget.org/packages/Xam.Plugins.TextToSpeech">Xam.Plugins.TextToSpeech</a></li>
+  <li><a href="https://tech.yandex.com/translate/">Yandex API</a></li>
 </ul>
+
+<h2>What it does</h2>
