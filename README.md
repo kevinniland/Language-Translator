@@ -36,3 +36,19 @@ application and tracked any issues that have arisen from this testing process.</
 </ul>
 
 <h2>What it does</h2>
+<p>The application is a simple language translator that takes in a user's input and translates the input into a desired language. The user input can be in three different forms; simple text the user has inputted, text from a file that the user has read in, or spoken text.</p>
+
+<h2>How to use the application</h2>
+<ul>
+  <li>Clone or download the project to your desired directory.</li>
+  <li>Open Visual Studio.</li>
+  <li>Open the solution (LanguageTranslator.sln) <b>(Due to the way Visual Studio handles paths, the project may need to be opened, rebuilt/built numerous times).</b></li>
+  <li>The application has been built to work both as an UWP (Universal Windows Platform) application and as an Android application. To launch the application on Windows, simply select 'LanguageTranslator.UWP' from the 'Startup Projects' dropdown. To deploy the application to your Android phone, you must first enable 'Developer Settings' on your phone:</li>
+  <ul>
+    <li>Go to Settings, and click on 'About Phone'.</li>
+    <li>Tap on 'Build Number' several times. You should be notified that you are now a developer.</li>
+    <li>Next, search your Settings for 'USB Debugging'.</li>
+    <li>Enable USB Debugging from here.</li>
+  </ul>
+  You should now be able to connect your phone to your PC via a USB cable and simply select 'LanguageTranslator.Android' from the 'Startup Projects' dropdown. Your phone should be recognised and you will be able to build the application to your phone.
+</ul>
