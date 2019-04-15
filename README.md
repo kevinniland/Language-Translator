@@ -52,3 +52,5 @@ application and tracked any issues that have arisen from this testing process.</
   </ul>
   You should now be able to connect your phone to your PC via a USB cable and simply select 'LanguageTranslator.Android' from the 'Startup Projects' dropdown. Your phone should be recognised and you will be able to build the application to your phone.
 </ul>
+
+<h2>Please refer to the wiki for research conducted, problems encountered, and more.</h2>
