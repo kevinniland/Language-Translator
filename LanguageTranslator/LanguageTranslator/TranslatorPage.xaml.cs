@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using LanguageTranslator.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -9,8 +10,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -18,10 +21,9 @@ using Xamarin.Forms.Xaml;
 
 namespace LanguageTranslator
 {
-
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TranslatorPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TranslatorPage : ContentPage
+    {
         #region Variables
         bool isRunning;
         string userInput, srcLang, translation;
@@ -41,31 +43,7 @@ namespace LanguageTranslator
             InitializeComponent();
             isRunning = true;
 
-            try
-            {
-                _iVoiceRecognition = DependencyService.Get<IVoiceRecognition>();
-            }
-            catch (Exception ex)
-            {
-                lblRecText.IsEnabled = true;
-                lblRecText.Text = ex.Message;
-            }
-
-
-            MessagingCenter.Subscribe<IVoiceRecognition, string>(this, "STT", (sender, args) =>
-            {
-                SpeechToText(args);
-            });
-
-            MessagingCenter.Subscribe<IVoiceRecognition>(this, "Final", (sender) =>
-            {
-                btnRecordVoice.IsEnabled = true;
-            });
-
-            MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
-            {
-                SpeechToText(args);
-            });
+            SpeechToTextImplementation();
         }
 
         #region RestSharp
@@ -87,15 +65,15 @@ namespace LanguageTranslator
         }
         #endregion
 
-        #region public methods - provides the main functionality of the app -> Methods are public to allow testing in LanguageTranslatorTest
-        public void LoadLanguages()
+        #region private methods - provides the main functionality of the app 
+        private void LoadLanguages(object sender, EventArgs e)
         {
             #region Load Languages
             // Load all available languages into the picker 'pckLangugages'
             // Fills the picker 'pckLanguages' with all available langauges when the main page is loaded
             var serverResponse = Request(string.Format(ApiSetup.getLanguages, ApiSetup.APIKey, lblSourceLanguage.Text));
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
-
+            
             foreach (DictionaryEntry dictionaryEntry in dictionary)
             {
                 if (dictionaryEntry.Key.Equals("langs"))
@@ -118,9 +96,9 @@ namespace LanguageTranslator
             #endregion
         }
 
-        public void EntText_TextChanged(object sender, TextChangedEventArgs e)
+        private void EntText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            LoadLanguages();
+            //LoadLanguages();
 
             #region Detect Source Language
             // Take in the entered text and pass it into the 'detectSourceLanguage' function - the language the user is writing in will be returned
@@ -128,31 +106,25 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
             var statusCode = dictionary["code"].ToString();
 
-            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
-            MongoClient client = new MongoClient(connectionString);
-
-            var database = client.GetDatabase("mobile_apps_dev");
-            var collection = database.GetCollection<BsonDocument>("translations_history");
-
-            var userInput = entText.Text;
+            userInput = entText.Text;
 
             if (statusCode.Equals("200"))
             {
                 lblSourceLanguage.Text = dictionary["lang"].ToString();
-                var srcLang = lblSourceLanguage.Text;
-
-                var document = new BsonDocument
-                {
-                    { "User Input", userInput },
-                    { "Source Language", srcLang }
-                };
-
-                collection.InsertOneAsync(document);
+                srcLang = lblSourceLanguage.Text;
             }
+
+            //using (StreamWriter streamWriter = new StreamWriter("output.txt", true))
+            //{
+            //    streamWriter.WriteLine(userInput);
+            //    streamWriter.WriteLine(srcLang);
+            //}
+
+            //UserInputSrcLang(userInput, srcLang);
             #endregion
         }
 
-        public void BtnTranslate_Clicked(object sender, EventArgs e)
+        private void BtnTranslate_Clicked(object sender, EventArgs e)
         {
             #region Translation
             /*
@@ -163,55 +135,38 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format
             var statusCode = dictionary["code"].ToString();
 
-            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
-            MongoClient client = new MongoClient(connectionString);
-
-            var database = client.GetDatabase("mobile_apps_dev");
-            var collection = database.GetCollection<BsonDocument>("translations_history");
-
             chosenLang = pckLanguages.SelectedIndex;
 
             if (statusCode.Equals("200"))
             {
                 entTranslation.Placeholder = string.Join("", dictionary["text"]);
                 translation = entTranslation.Placeholder;
-
-                var document = new BsonDocument
-                {
-                    { "Chosen Language", chosenLang },
-                    { "Translation", translation }
-                };
-
-                collection.InsertOneAsync(document);
             }
+
+            // ChosenLangTranslation(chosenLang, translation);
+            // SaveToDatabase(userInput, srcLang, chosenLang, translation);
             #endregion
         }
 
-        #region MongoDB/MLab
-        public void SaveToDatabase(string userInput, string srcLang, int chosenLang, string translation)
-        {
-            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
-            MongoClient client = new MongoClient(connectionString);
+        //private void UserInputSrcLang(string userInput, string srcLang)
+        //{
+        //    this.userInput = userInput;
+        //    this.srcLang = srcLang;
 
-            var database = client.GetDatabase("mobile_apps_dev");
-            var collection = database.GetCollection<BsonDocument>("translations_history");
+        //    // Debug.Write(userInput, srcLang);
+        //    // SaveToDatabase(userInput, srcLang);
+        //}
 
-            while (isRunning)
-            {
-                var document = new BsonDocument
-                {
-                    { "User Input", userInput },
-                    { "Source Language", srcLang },
-                    { "Chosen Language", chosenLang },
-                    { "Translation", translation }
-                };
+        //private void ChosenLangTranslation(int chosenLang, string translation)
+        //{
+        //    this.chosenLang = chosenLang;
+        //    this.translation = translation;
 
-                collection.InsertOneAsync(document);
-            }
-        }
-        #endregion
+        //    // Debug.Write(chosenLang, translation);
+        //    // SaveToDatabaseTwo(chosenLang, translation);
+        //}
 
-        public async void BtnReadFile_Clicked(object sender, EventArgs e)
+        private async void BtnReadFile_Clicked(object sender, EventArgs e)
         {
             #region Read in a file from anywhere
             string fileText;
@@ -233,12 +188,12 @@ namespace LanguageTranslator
             #endregion
         }
 
-        public void SpeechToText(string args)
+        private void SpeechToText(string args)
         {
             entText.Text = args;
         }
 
-        public void BtnRecordVoice_Clicked(object sender, EventArgs e)
+        private void BtnRecordVoice_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -255,21 +210,29 @@ namespace LanguageTranslator
 
         }
 
-        public void SpeechToTextFinalResultRecieved(string args)
+        private void SpeechToTextImplementation()
         {
-            lblRecText.Text = args;
+            _iVoiceRecognition = DependencyService.Get<IVoiceRecognition>();
+
+            MessagingCenter.Subscribe<IVoiceRecognition, string>(this, "STT", (sender, args) =>
+            {
+                SpeechToText(args);
+            });
+
+            MessagingCenter.Subscribe<IVoiceRecognition>(this, "Final", (sender) =>
+            {
+                btnRecordVoice.IsEnabled = true;
+            });
+
+            MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
+            {
+                SpeechToText(args);
+            });
         }
 
-        public void Start_Clicked(object sender, EventArgs e)
+        private void Start_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                _iVoiceRecognition.startSpeechToText();
-            }
-            catch (Exception ex)
-            {
-                lblRecText.Text = ex.Message;
-            }
+            _iVoiceRecognition.startSpeechToText();
 
             if (Device.RuntimePlatform == Device.iOS)
             {
@@ -279,6 +242,49 @@ namespace LanguageTranslator
 
 
         }
+
+        #region MongoDB/MLab
+        //private void SaveToDatabase(string uInput, string sLang, int cLang, string trnslation)
+        //{
+        //    this.userInput = uInput;
+        //    this.srcLang = sLang;
+        //    this.chosenLang = cLang;
+        //    this.translation = trnslation;
+
+        //    Debug.Write(userInput, srcLang);
+        //    Debug.Write(chosenLang, translation);
+
+        //    string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+        //    MongoClient client = new MongoClient(connectionString);
+
+        //    var database = client.GetDatabase("mobile_apps_dev");
+        //    var collection = database.GetCollection<BsonDocument>("translations_history");
+
+        //    var document = new BsonDocument
+        //    {
+        //        { "User Input", userInput },
+        //        { "Source Language", srcLang },
+        //        { "Chosen Language", chosenLang },
+        //        { "Translation", translation }
+        //    };
+
+        //    collection.InsertOneAsync(document);
+        //}
+        #endregion
+
+        #endregion
     }
-    #endregion
+
+    // Attempt at loading languages on start instead of everytime user enters text
+    //public class LoadAllLanguages
+    //{
+    //    public static void Main()
+    //    {
+    //        TranslatorPage translatorPage = new TranslatorPage();
+
+    //        Thread thread = new Thread(new ThreadStart(translatorPage.LoadLanguages));
+
+    //        thread.Start();
+    //    }
+    //}
 }
