@@ -43,6 +43,7 @@ namespace LanguageTranslator
             InitializeComponent();
             isRunning = true;
 
+            // LoadLanguages();
             SpeechToTextImplementation();
         }
 
@@ -71,9 +72,12 @@ namespace LanguageTranslator
             #region Load Languages
             // Load all available languages into the picker 'pckLangugages'
             // Fills the picker 'pckLanguages' with all available langauges when the main page is loaded
+
             var serverResponse = Request(string.Format(ApiSetup.getLanguages, ApiSetup.APIKey, lblSourceLanguage.Text));
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
-            
+
+            //Task task = Task.Factory.StartNew(() =>
+            //{
             foreach (DictionaryEntry dictionaryEntry in dictionary)
             {
                 if (dictionaryEntry.Key.Equals("langs"))
@@ -81,7 +85,7 @@ namespace LanguageTranslator
                     var languages = (JObject)dictionaryEntry.Value;
                     LanguagesList = new List<string>();
 
-                    pckLanguages.Items.Clear();
+                    // pckLanguages.Items.Clear();
 
                     foreach (var lang in languages)
                     {
@@ -93,12 +97,13 @@ namespace LanguageTranslator
                     }
                 }
             }
+            // });
             #endregion
         }
 
         private void EntText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //LoadLanguages();
+            // LoadLanguages();
 
             #region Detect Source Language
             // Take in the entered text and pass it into the 'detectSourceLanguage' function - the language the user is writing in will be returned
@@ -205,11 +210,6 @@ namespace LanguageTranslator
             }
         }
 
-        private void BtnTextRecognise_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void SpeechToTextImplementation()
         {
             _iVoiceRecognition = DependencyService.Get<IVoiceRecognition>();
@@ -224,10 +224,10 @@ namespace LanguageTranslator
                 btnRecordVoice.IsEnabled = true;
             });
 
-            MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
-            {
-                SpeechToText(args);
-            });
+            //MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
+            //{
+            //    SpeechToText(args);
+            //});
         }
 
         private void Start_Clicked(object sender, EventArgs e)
@@ -238,9 +238,6 @@ namespace LanguageTranslator
             {
                 btnRecordVoice.IsEnabled = false;
             }
-
-
-
         }
 
         #region MongoDB/MLab

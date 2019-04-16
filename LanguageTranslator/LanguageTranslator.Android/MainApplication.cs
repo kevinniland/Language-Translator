@@ -13,6 +13,9 @@ using Plugin.CurrentActivity;
 
 namespace LanguageTranslator.Droid
 {
+    /* Since the SpeechToTextImplementation class is not an activity, we use the 'CurrentActivity' plugin to get intent 
+     * from this class (through RecognizerIntent). In the constructor of SpeechToTextImplementation, we get the reference to the current activity
+     */
     [Application]
     public class MainApplication : Application, Application.IActivityLifecycleCallbacks
     {

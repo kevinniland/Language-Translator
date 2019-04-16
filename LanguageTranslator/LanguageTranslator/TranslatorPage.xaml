@@ -31,7 +31,6 @@
         </StackLayout>
         <StackLayout x:Name="slButtonsTwo" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Margin="5, 5, 5, 5">
             <Button x:Name="btnRecordVoice" Text="Try Saying Something" Margin="1" Clicked="BtnRecordVoice_Clicked" />
-            <Button x:Name="btnTextRecognise" Text="Take Picture Of Text" Margin="1" Clicked="BtnTextRecognise_Clicked" />
         </StackLayout>
         <StackLayout x:Name="slFileName" Grid.Row="5" Orientation="Horizontal" HorizontalOptions="Center" Margin="3, 6, 3, 3">
             <Label Text="File: " />
