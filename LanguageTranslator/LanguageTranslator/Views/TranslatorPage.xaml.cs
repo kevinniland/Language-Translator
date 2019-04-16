@@ -30,8 +30,8 @@ namespace LanguageTranslator
         int chosenLang;
         #endregion
 
-#region Interfaces
-private IVoiceRecognition _iVoiceRecognition;
+        #region Interfaces
+        private IVoiceRecognition _iVoiceRecognition;
         #endregion
 
         #region Lists
@@ -113,21 +113,27 @@ private IVoiceRecognition _iVoiceRecognition;
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
             var statusCode = dictionary["code"].ToString();
 
+            //string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+            //MongoClient client = new MongoClient(connectionString);
+
+            //var database = client.GetDatabase("mobile_apps_dev");
+            //var collection = database.GetCollection<BsonDocument>("translations_history");
+
             userInput = entText.Text;
 
             if (statusCode.Equals("200"))
             {
                 lblSourceLanguage.Text = dictionary["lang"].ToString();
                 srcLang = lblSourceLanguage.Text;
+
+            //    var document = new BsonDocument
+            //    {
+            //        { "User Input", userInput },
+            //        { "Source Language", srcLang }
+            //    };
+
+            //    collection.InsertOneAsync(document);
             }
-
-            //using (StreamWriter streamWriter = new StreamWriter("output.txt", true))
-            //{
-            //    streamWriter.WriteLine(userInput);
-            //    streamWriter.WriteLine(srcLang);
-            //}
-
-            //UserInputSrcLang(userInput, srcLang);
             #endregion
         }
 
@@ -142,30 +148,29 @@ private IVoiceRecognition _iVoiceRecognition;
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format
             var statusCode = dictionary["code"].ToString();
 
+            string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
+            MongoClient client = new MongoClient(connectionString);
+
+            var database = client.GetDatabase("mobile_apps_dev");
+            var collection = database.GetCollection<BsonDocument>("translations_history");
+
             chosenLang = pckLanguages.SelectedIndex;
 
             if (statusCode.Equals("200"))
             {
                 entTranslation.Placeholder = string.Join("", dictionary["text"]);
                 translation = entTranslation.Placeholder;
+
+                var document = new BsonDocument
+                {
+                    { "Translation", translation }
+                };
+
+                collection.InsertOneAsync(document);
             }
 
             // ChosenLangTranslation(chosenLang, translation);
             // SaveToDatabase(userInput, srcLang, chosenLang, translation);
-            #endregion
-
-            #region Save to file
-            //string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            //string fileName = Path.Combine(path, Utils.TRANSLATION_SAVE_FILE);
-
-            string fileName = "previousTranslations";
-            string path = Path.Combine(Environment.CurrentDirectory, @"Files\", fileName);
-
-            using (var writer = new StreamWriter(fileName, true))
-            {
-                string stringifiedText = "Translation: " + translation;
-                writer.WriteLine(stringifiedText);
-            }
             #endregion
         }
 
