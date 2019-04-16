@@ -30,14 +30,15 @@ namespace LanguageTranslator
         int chosenLang;
         #endregion
 
-        #region Interfaces
-        private IVoiceRecognition _iVoiceRecognition;
+#region Interfaces
+private IVoiceRecognition _iVoiceRecognition;
         #endregion
 
         #region Lists
         private List<string> LanguagesList;
         #endregion
 
+        #region Constructor
         public TranslatorPage()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace LanguageTranslator
             // LoadLanguages();
             SpeechToTextImplementation();
         }
+        #endregion
 
         #region RestSharp
         private IRestResponse Request(string url)
@@ -151,25 +153,21 @@ namespace LanguageTranslator
             // ChosenLangTranslation(chosenLang, translation);
             // SaveToDatabase(userInput, srcLang, chosenLang, translation);
             #endregion
+
+            #region Save to file
+            //string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            //string fileName = Path.Combine(path, Utils.TRANSLATION_SAVE_FILE);
+
+            string fileName = "previousTranslations";
+            string path = Path.Combine(Environment.CurrentDirectory, @"Files\", fileName);
+
+            using (var writer = new StreamWriter(fileName, true))
+            {
+                string stringifiedText = "Translation: " + translation;
+                writer.WriteLine(stringifiedText);
+            }
+            #endregion
         }
-
-        //private void UserInputSrcLang(string userInput, string srcLang)
-        //{
-        //    this.userInput = userInput;
-        //    this.srcLang = srcLang;
-
-        //    // Debug.Write(userInput, srcLang);
-        //    // SaveToDatabase(userInput, srcLang);
-        //}
-
-        //private void ChosenLangTranslation(int chosenLang, string translation)
-        //{
-        //    this.chosenLang = chosenLang;
-        //    this.translation = translation;
-
-        //    // Debug.Write(chosenLang, translation);
-        //    // SaveToDatabaseTwo(chosenLang, translation);
-        //}
 
         private async void BtnReadFile_Clicked(object sender, EventArgs e)
         {
@@ -193,6 +191,7 @@ namespace LanguageTranslator
             #endregion
         }
 
+        #region Speech-To-Text functionality
         private void SpeechToText(string args)
         {
             entText.Text = args;
@@ -224,21 +223,17 @@ namespace LanguageTranslator
                 btnRecordVoice.IsEnabled = true;
             });
 
-            //MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
-            //{
-            //    SpeechToText(args);
-            //});
+            MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) =>
+            {
+                SpeechToText(args);
+            });
         }
 
         private void Start_Clicked(object sender, EventArgs e)
         {
             _iVoiceRecognition.startSpeechToText();
-
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                btnRecordVoice.IsEnabled = false;
-            }
         }
+        #endregion
 
         #region MongoDB/MLab
         //private void SaveToDatabase(string uInput, string sLang, int cLang, string trnslation)
@@ -268,7 +263,6 @@ namespace LanguageTranslator
         //    collection.InsertOneAsync(document);
         //}
         #endregion
-
         #endregion
     }
 

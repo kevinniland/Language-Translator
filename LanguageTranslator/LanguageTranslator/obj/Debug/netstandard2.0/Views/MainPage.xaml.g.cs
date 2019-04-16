@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LanguageTranslator.History.xaml", "History.xaml", typeof(global::LanguageTranslator.History))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LanguageTranslator.Views.MainPage.xaml", "Views/MainPage.xaml", typeof(global::LanguageTranslator.MainPage))]
 
 namespace LanguageTranslator {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("History.xaml")]
-    public partial class History : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\MainPage.xaml")]
+    public partial class MainPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(History));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
         }
     }
 }

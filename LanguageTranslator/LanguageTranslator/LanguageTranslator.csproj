@@ -25,10 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="History.xaml">
+    <EmbeddedResource Update="Views\History.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="TranslatorPage.xaml">
+    <EmbeddedResource Update="Views\TranslatorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

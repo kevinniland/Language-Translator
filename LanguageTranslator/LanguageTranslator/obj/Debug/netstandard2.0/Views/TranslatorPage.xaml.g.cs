@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LanguageTranslator.TranslatorPage.xaml", "TranslatorPage.xaml", typeof(global::LanguageTranslator.TranslatorPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LanguageTranslator.Views.TranslatorPage.xaml", "Views/TranslatorPage.xaml", typeof(global::LanguageTranslator.TranslatorPage))]
 
 namespace LanguageTranslator {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("TranslatorPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\TranslatorPage.xaml")]
     public partial class TranslatorPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -48,6 +47,8 @@ namespace LanguageTranslator.Droid
                      *      MessagingCenter.Subscribe<IMessageSender, string>(this, "STT", (sender, args) => {
                      * 
                      *      });
+                     *      
+                     * https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/messaging-center
                      */
                     if (matches.Count != 0)
                     {
