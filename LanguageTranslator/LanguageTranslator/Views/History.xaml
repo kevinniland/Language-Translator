@@ -2,5 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LanguageTranslator.History">
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+            <Entry x:Name="entCollection"  HeightRequest="200" WidthRequest="250" />
+            <Button x:Name="btnRefreshList" Clicked="BtnRefreshList_Clicked" />
+        </StackLayout>
+    </Grid>
 </ContentPage>

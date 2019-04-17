@@ -26,8 +26,8 @@ namespace LanguageTranslator
     {
         #region Variables
         bool isRunning;
-        string userInput, srcLang, translation;
-        int chosenLang;
+        string /*userInput, srcLang,*/ translation;
+        // int chosenLang;
         #endregion
 
         #region Interfaces
@@ -74,7 +74,6 @@ namespace LanguageTranslator
             #region Load Languages
             // Load all available languages into the picker 'pckLangugages'
             // Fills the picker 'pckLanguages' with all available langauges when the main page is loaded
-
             var serverResponse = Request(string.Format(ApiSetup.getLanguages, ApiSetup.APIKey, lblSourceLanguage.Text));
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
 
@@ -87,7 +86,7 @@ namespace LanguageTranslator
                     var languages = (JObject)dictionaryEntry.Value;
                     LanguagesList = new List<string>();
 
-                    // pckLanguages.Items.Clear();
+                    pckLanguages.Items.Clear();
 
                     foreach (var lang in languages)
                     {
@@ -113,26 +112,12 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format 
             var statusCode = dictionary["code"].ToString();
 
-            //string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
-            //MongoClient client = new MongoClient(connectionString);
-
-            //var database = client.GetDatabase("mobile_apps_dev");
-            //var collection = database.GetCollection<BsonDocument>("translations_history");
-
-            userInput = entText.Text;
+            // userInput = entText.Text;
 
             if (statusCode.Equals("200"))
             {
                 lblSourceLanguage.Text = dictionary["lang"].ToString();
-                srcLang = lblSourceLanguage.Text;
-
-            //    var document = new BsonDocument
-            //    {
-            //        { "User Input", userInput },
-            //        { "Source Language", srcLang }
-            //    };
-
-            //    collection.InsertOneAsync(document);
+                // srcLang = lblSourceLanguage.Text;
             }
             #endregion
         }
@@ -148,13 +133,16 @@ namespace LanguageTranslator
             var dictionary = JsonConvert.DeserializeObject<IDictionary>(serverResponse.Content); // Converts the server response into JSON format
             var statusCode = dictionary["code"].ToString();
 
+            /* 
+             * This stores the translation on MLab (IF YOU WISH TO VIEW THE COLLECTION, PLEASE E-MAIL ME FOR LOGIN CREDENTIALS)
+             */ 
             string connectionString = "mongodb://kevin_niland:test123@ds133256.mlab.com:33256/mobile_apps_dev";
             MongoClient client = new MongoClient(connectionString);
 
             var database = client.GetDatabase("mobile_apps_dev");
             var collection = database.GetCollection<BsonDocument>("translations_history");
 
-            chosenLang = pckLanguages.SelectedIndex;
+            //chosenLang = pckLanguages.SelectedIndex;
 
             if (statusCode.Equals("200"))
             {
@@ -220,11 +208,13 @@ namespace LanguageTranslator
 
             MessagingCenter.Subscribe<IVoiceRecognition, string>(this, "STT", (sender, args) =>
             {
+                // SpeechToText takes in args (user input)
                 SpeechToText(args);
             });
 
             MessagingCenter.Subscribe<IVoiceRecognition>(this, "Final", (sender) =>
             {
+                // The record voice button is enbaled to allow the user to utilise their device's microphone and record their phone
                 btnRecordVoice.IsEnabled = true;
             });
 

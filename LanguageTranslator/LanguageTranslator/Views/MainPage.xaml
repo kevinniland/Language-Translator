@@ -5,5 +5,5 @@
              x:Class="LanguageTranslator.MainPage">
     
     <local:TranslatorPage Title="Translator" />
-    <local:History Title="History" />
+    <!--<local:History Title="History" />-->
 </TabbedPage>
