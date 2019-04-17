@@ -36,7 +36,7 @@ application and tracked any issues that have arisen from this testing process.</
 </ul>
 
 <h2>What it does</h2>
-<p>The application is a simple language translator that takes in a user's input and translates the input into a desired language. The user input can be in three different forms; simple text the user has inputted, text from a file that the user has read in, or spoken text.</p>
+<p>The application is a simple language translator that takes in a user's input and translates the input into a desired language. The user input can be in three different forms; simple text the user has inputted, text from a file that the user has read in, or spoken text. The translation is stored on MLab <b>(If you wish to view the collection on MLab to verify that transaltions are being saved, please e-mail me)</b>.</p>
 
 <h2>How to use the application</h2>
 <ul>
